@@ -3,7 +3,7 @@ let textoMenu =  `Qual operação você deseja fazer :
                   2 - Subtração
                   3 - Multiplicação
                   4 - Divisão
-                  5 - Potencioação
+                  5 - Potenciação
                   6 - Radiciação`
 
 //Converte a string do campo digitando no prompt para numero inteiro
@@ -60,13 +60,13 @@ switch (operação_selecionada) {
               break;
                 
     case "5":
-            operaçãonome = "Potencioação"
-            let Potencioação1 = parseFloat(prompt("Informe o Primeiro Numero:"))
-            let Potencioação2 = parseFloat(prompt("Informe o Segundo Numero:"))
+            operaçãonome = "Potenciação"
+            let Potenciação1 = parseFloat(prompt("Informe o Primeiro Numero:"))
+            let Potenciação2 = parseFloat(prompt("Informe o Segundo Numero:"))
 
-            let resultado_potencioação = Potencioação1 ** Potencioação2
+            let resultado_potencioação = Potenciação1 ** Potenciação2
         {
-                mensagem = " O resultado da potencioção é: " + resultado_potencioação
+                mensagem = " O resultado da potencição é: " + resultado_potencioação
         }
             break;
     case "6":
