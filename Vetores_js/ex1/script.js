@@ -17,7 +17,7 @@ let continuar = true;
 function entrar() {
     if (nomes.length < 100) {
         let nome = prompt("Informe o nome completo:");
-        while (!nome || nome.split(' ').length < 2 || /\d/.test(nome)) {
+        while (!nome || nome.split(' ').length < 2 || hasNumber(nome)) {
             nome = prompt("Nome inválido. Informe o nome completo (nome e sobrenome) sem números:");
         }
 
@@ -37,6 +37,15 @@ function entrar() {
     } else {
         alert("Limite de 100 pessoas atingido.");
     }
+}
+
+function hasNumber(str) {
+    for (let i = 0; i < str.length; i++) {
+        if (!isNaN(str[i]) && str[i] !== ' ') {
+            return true;
+        }
+    }
+    return false;
 }
 
 function exibirCadastrados() {
