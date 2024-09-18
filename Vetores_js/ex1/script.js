@@ -17,8 +17,8 @@ let continuar = true;
 function entrar() {
     if (nomes.length < 100) {
         let nome = prompt("Informe o nome completo:");
-        while (!nome || nome.split(' ').length < 2) {
-            nome = prompt("Nome inválido. Informe o nome completo (nome e sobrenome):");
+        while (!nome || nome.split(' ').length < 2 || /\d/.test(nome)) {
+            nome = prompt("Nome inválido. Informe o nome completo (nome e sobrenome) sem números:");
         }
 
         let idade = parseInt(prompt("Informe a idade:"));
@@ -46,6 +46,7 @@ function exibirCadastrados() {
     }
 }
 
+// Função para iniciar o cadastro
 while (continuar) {
     entrar();
     let opcao = prompt("Deseja continuar cadastrando? (1 - Sim, 2 - Exibir)");
